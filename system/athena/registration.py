@@ -31,6 +31,7 @@ def register(show_spinner=False) -> str | None:
   of dongle ID to some endpoints, this can be removed
   entirely.
   """
+  return UNREGISTERED_DONGLE_ID
   params = Params()
   dongle_id: str | None = params.get("DongleId")
   if dongle_id is None and Path(Paths.persist_root()+"/comma/dongle_id").is_file():
